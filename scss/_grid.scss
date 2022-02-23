@@ -1,0 +1,30 @@
+//No sé si esta bien hecho el grid así 
+
+/* GRID SMARTPHONE*/
+.bodyGrid{
+    display: grid;
+    grid-template-areas: 
+    /* 1 columna y 3 filas */
+    "header"/* Fila 1 */
+    "main"/* Fila 2 */
+    "footer"/* Fila 3 */
+    ;
+    /* TAMAÑOS */
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+/* GRID TABLET Y DESKTOP*/
+    .bodyGrid{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer"
+        ;
+        /* TAMAÑOS */
+        grid-template-columns: auto;
+        grid-template-rows:3fr 7fr 2fr ;
+    }
+    body{
+        height: 100vh;
+    }

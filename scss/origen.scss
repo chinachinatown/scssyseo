@@ -1,0 +1,91 @@
+@import "grid";
+@import "responsive";
+@import "estructura";
+@import "nosotros";
+@import "formulario";
+@import "animaciones";
+@import"colores";
+@import"tipografia";
+
+/*ANIDAMIENTO*/ 
+
+.logoFlex{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    .logoAnimado{
+        animation-name: logo;
+        animation-iteration-count: infinite;
+        animation-duration: 3s;
+    }
+}
+.portfolioFlex{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    .portfolioCuadros{
+        border: 5px solid $colorOcho;
+        margin: 40px;
+    }
+}
+ul{
+    list-style-type: none;
+    padding: 5px;
+    height: 15px;
+
+    li{
+        margin-left: 70px;
+        padding: 5px;
+        width: 60px;
+        height: 15px;
+        text-align: center;
+    }
+}
+
+.busquedaFlex{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+    margin-right: 15px;
+}
+h1{
+    font-family: $tipoDos;
+}
+.tecnicaCuadros{
+    color:$colorCinco;
+    font-family: $tipoTres;
+    font-size: 20px;
+}
+.nombreProductos{
+    color:$colorSeis;
+    font-family: $tipoCuatro;
+    font-size: 30px;
+}
+/*MIXINS*/
+@mixin sizes ($anchura, $altura) {
+    width: $anchura;
+    height: $altura;
+}
+
+.tamanioUno{
+    @include sizes (40%, 40%);
+}
+.tamanioDos{
+    @include sizes (30%, 5vh);
+}
+.tamanioTres{
+    @include sizes (60px, 15 px);
+}
+/* MAPAS*/
+$maps:(
+    header: #FFB6C1,
+    main: whitesmoke,
+    footer: #d3d3d3
+    );
+    /*EACH CON MAPS*/
+    @each $seccion, $fondo in $maps {
+    .bgcolor-#{$seccion} {
+    background-color: $fondo;
+}
+}
+//No encontré nada en donde poder aplicar un extend

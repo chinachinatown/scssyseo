@@ -1,0 +1,309 @@
+@charset "UTF-8";
+/* GRID SMARTPHONE*/
+.bodyGrid {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  /* TAMAÑOS */
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 2fr 1fr;
+}
+
+/* GRID TABLET Y DESKTOP*/
+.bodyGrid {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  /* TAMAÑOS */
+  grid-template-columns: auto;
+  grid-template-rows: 3fr 7fr 2fr;
+}
+
+body {
+  height: 100vh;
+}
+
+/*Responsive*/
+/*Smartphone*/
+/*Tablet*/
+/*Desktop*/
+/*Estilos generales tipografía*/
+.sinSubrayar {
+  text-decoration: none;
+}
+
+.cursiva {
+  font-style: italic;
+}
+
+.interlineado {
+  line-height: 1.5;
+}
+
+/*Header*/
+.header {
+  grid-area: header;
+  padding-bottom: 0px;
+}
+.header .redesHeader {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+  margin-right: 90px;
+}
+
+/*Menú*/
+.menuFlex {
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: black;
+  padding-top: 50px;
+  padding-bottom: 0px;
+  justify-content: center;
+}
+
+span {
+  background-color: white;
+  margin-left: 10px;
+  padding-bottom: 5px;
+  width: 10%;
+  height: 20px;
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+span:hover {
+  background-color: black;
+}
+
+/*Main*/
+.main {
+  grid-area: main;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-top: 30px;
+}
+.main .imagenAbstracta {
+  display: flex;
+  justify-content: center;
+}
+.main .bienvenidaMain {
+  color: #740774;
+  text-align: center;
+  padding-bottom: 15px;
+  font-size: 50px;
+}
+.main .textoMain {
+  color: #000080;
+  font-family: "Lato", sans-serif;
+  font-size: 150%;
+  text-align: center;
+  padding-bottom: 70px;
+  padding-top: 70px;
+  font-weight: 300;
+}
+
+/*Footer*/
+.footer {
+  grid-area: footer;
+  padding-top: 80px;
+}
+.footer .footerFlex {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 25px;
+}
+
+.redesFooter {
+  display: flex;
+  flex-direction: row;
+  margin-left: 70px;
+  width: 20px;
+}
+
+.logosFooter {
+  padding-bottom: 10px;
+  margin-left: 20px;
+}
+
+.copyrightFlex {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*Sección nosotros*/
+.sobreNosotros {
+  color: indigo;
+  font-size: 25px;
+  text-decoration: underline;
+  margin-bottom: 5px;
+}
+
+.textoNosotros {
+  color: indigo;
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.videoNosotros {
+  margin-left: 30%;
+}
+
+/*Formulario contacto*/
+textarea {
+  width: 45%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 25%;
+}
+
+.inputFormulario {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 33%;
+}
+
+.botonEnviar {
+  width: 7%;
+  margin-top: 2%;
+  margin-left: 43%;
+}
+
+/*Animaciones*/
+.textoAnimado {
+  animation-name: texto;
+  animation-iteration-count: 1;
+  animation-duration: 5s;
+}
+
+.menuGradiente {
+  background-image: linear-gradient(#FAA6B3, #753565, black);
+}
+
+/* KEYFRAMES */
+@keyframes texto {
+  from {
+    transform: translate(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+@keyframes logo {
+  0% {
+    border-radius: 50%;
+  }
+  30% {
+    transform: rotateY(40deg);
+  }
+  50% {
+    transform: rotateX(25deg);
+  }
+  100% {
+    border-radius: 50%;
+  }
+}
+/*Estilos generales tipografía*/
+.sinSubrayar {
+  text-decoration: none;
+}
+
+.cursiva {
+  font-style: italic;
+}
+
+.interlineado {
+  line-height: 1.5;
+}
+
+/*ANIDAMIENTO*/
+.logoFlex {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+.logoFlex .logoAnimado {
+  animation-name: logo;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+
+.portfolioFlex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.portfolioFlex .portfolioCuadros {
+  border: 5px solid violet;
+  margin: 40px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 5px;
+  height: 15px;
+}
+ul li {
+  margin-left: 70px;
+  padding: 5px;
+  width: 60px;
+  height: 15px;
+  text-align: center;
+}
+
+.busquedaFlex {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+  margin-right: 15px;
+}
+
+h1 {
+  font-family: "Fjalla One", sans-serif;
+}
+
+.tecnicaCuadros {
+  color: midnightblue;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 20px;
+}
+
+.nombreProductos {
+  color: #FF1493;
+  font-family: "Dosis", sans-serif;
+  font-size: 30px;
+}
+
+/*MIXINS*/
+.tamanioUno {
+  width: 40%;
+  height: 40%;
+}
+
+.tamanioDos {
+  width: 30%;
+  height: 5vh;
+}
+
+.tamanioTres {
+  width: 60px;
+  height: 15 px;
+}
+
+/* MAPAS*/
+/*EACH CON MAPS*/
+.bgcolor-header {
+  background-color: #FFB6C1;
+}
+
+.bgcolor-main {
+  background-color: whitesmoke;
+}
+
+.bgcolor-footer {
+  background-color: #d3d3d3;
+}
+
+/*# sourceMappingURL=destino.css.map */

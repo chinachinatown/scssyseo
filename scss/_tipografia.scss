@@ -1,0 +1,19 @@
+//Variables tipografía
+
+$tipoUno: 'Roboto Mono', monospace;
+$tipoDos: 'Fjalla One', sans-serif;
+$tipoTres: 'Saira Condensed', sans-serif;
+$tipoCuatro: 'Dosis', sans-serif;
+$tipoCinco: 'Lato', sans-serif;
+
+/*Estilos generales tipografía*/
+
+.sinSubrayar{
+    text-decoration: none;
+}
+.cursiva{
+    font-style: italic;
+}
+.interlineado{
+    line-height: 1.5;
+}
